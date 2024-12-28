@@ -1,0 +1,44 @@
+<script setup lang="ts">
+const router = useRouter();
+const id = useRoute("/cache/[id]/").params.id;
+id ? router.push("/cache/:id/over-view") : router.replace("/404");
+definePage({ name: "CacheLayout" });
+</script>
+
+<template>
+  <main class="p-6">
+    <header class="pb-1 border-b mb-4">
+      <div class="pl-3">Cache Layouts</div>
+      <nav class="my-3 divide-blue divide-x-[1px] divide-dashed">
+        <RouterLink class="px-3 rounded-sm inline-block border-gray-300 hover:bg-[#00bd7e33]" active-class="a-active"
+          :to="`/cache/${id}/over-view`">
+          OverView
+        </RouterLink>
+        <RouterLink class="px-3 rounded-sm inline-block border-gray-300 hover:bg-[#00bd7e33]" active-class="a-active"
+          :to="`/cache/${id}/content`">
+          Content
+        </RouterLink>
+        <RouterLink class="px-3 rounded-sm inline-block border-gray-300 hover:bg-[#00bd7e33]" active-class="a-active"
+          :to="`/cache/${id}/token`">
+          Token
+        </RouterLink>
+      </nav>
+    </header>
+
+    <RouterView />
+  </main>
+</template>
+
+<style>
+.a-active {
+  color: hsla(160, 100%, 37%, 1);
+}
+
+a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+/* nav a.router-link-exact-active {
+  color: #2c3e50;
+} */
+</style>

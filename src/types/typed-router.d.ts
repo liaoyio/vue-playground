@@ -19,7 +19,17 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/404': RouteRecordInfo<'/404', '/404', Record<never, never>, Record<never, never>>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
+    'CacheLayout': RouteRecordInfo<'CacheLayout', '/cache', Record<never, never>, Record<never, never>>,
+    '/cache/[id]/': RouteRecordInfo<'/cache/[id]/', '/cache/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/cache/[id]/content': RouteRecordInfo<'/cache/[id]/content', '/cache/:id/content', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/cache/[id]/over-view': RouteRecordInfo<'/cache/[id]/over-view', '/cache/:id/over-view', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/cache/[id]/token': RouteRecordInfo<'/cache/[id]/token', '/cache/:id/token', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/users/': RouteRecordInfo<'/users/', '/users', Record<never, never>, Record<never, never>>,
     '/users/[id]': RouteRecordInfo<'/users/[id]', '/users/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/users/[id].detail': RouteRecordInfo<'/users/[id].detail', '/users/:id/detail', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/users/[id].setting': RouteRecordInfo<'/users/[id].setting', '/users/:id/setting', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/users/[id].team': RouteRecordInfo<'/users/[id].team', '/users/:id/team', { id: ParamValue<true> }, { id: ParamValue<false> }>,
   }
 }

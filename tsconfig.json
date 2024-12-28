@@ -18,6 +18,12 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vite.config.*"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "vite.config.*",
+    "src/pages/users/[[id]].vue"
+  ],
   "exclude": ["node_modules"]
 }
