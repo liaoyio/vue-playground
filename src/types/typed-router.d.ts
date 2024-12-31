@@ -26,10 +26,6 @@ declare module 'vue-router/auto-routes' {
     '/cache/[id]/content': RouteRecordInfo<'/cache/[id]/content', '/cache/:id/content', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/over-view': RouteRecordInfo<'/cache/[id]/over-view', '/cache/:id/over-view', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/token': RouteRecordInfo<'/cache/[id]/token', '/cache/:id/token', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    '/users/': RouteRecordInfo<'/users/', '/users', Record<never, never>, Record<never, never>>,
-    '/users/[id]': RouteRecordInfo<'/users/[id]', '/users/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    '/users/[id].detail': RouteRecordInfo<'/users/[id].detail', '/users/:id/detail', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    '/users/[id].setting': RouteRecordInfo<'/users/[id].setting', '/users/:id/setting', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    '/users/[id].team': RouteRecordInfo<'/users/[id].team', '/users/:id/team', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/life-cycle': RouteRecordInfo<'/life-cycle', '/life-cycle', Record<never, never>, Record<never, never>>,
   }
 }
