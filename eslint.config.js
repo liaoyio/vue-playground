@@ -21,6 +21,7 @@ export default sxzz(
         'comma-dangle': ['error', 'never']
       }
     },
+
     {
       name: 'directives-ignores',
       files: ['src/directives/**/*.ts'],

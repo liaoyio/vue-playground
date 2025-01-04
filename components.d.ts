@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AllCount: typeof import('./src/components/timer/all-count.vue')['default']
+    BadUse: typeof import('./src/components/modal/bad-use.vue')['default']
     ButtonList: typeof import('./src/components/button-list.vue')['default']
     Child1: typeof import('./src/components/life-cycle/child1.vue')['default']
     Child2: typeof import('./src/components/life-cycle/child2.vue')['default']
@@ -16,8 +17,14 @@ declare module 'vue' {
     ElButton: typeof import('element-plus/es')['ElButton']
     ElInput: typeof import('element-plus/es')['ElInput']
     Father: typeof import('./src/components/life-cycle/father.vue')['default']
+    GoodCase: typeof import('./src/components/modal/good-case/index.vue')['default']
+    Modal1: typeof import('./src/components/modal/modal-1.vue')['default']
+    Modal2: typeof import('./src/components/modal/modal-2.vue')['default']
+    Modal3: typeof import('./src/components/modal/modal-3.vue')['default']
     MyCountdown: typeof import('./src/components/timer/my-countdown.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UnityModal: typeof import('./src/components/modal/good-case/unity-modal.vue')['default']
+    Use: typeof import('./src/components/modal/use.vue')['default']
   }
 }
