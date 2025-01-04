@@ -7,12 +7,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AllCount: typeof import('./src/components/timer/all-count.vue')['default']
+    ButtonList: typeof import('./src/components/button-list.vue')['default']
     Child1: typeof import('./src/components/life-cycle/child1.vue')['default']
     Child2: typeof import('./src/components/life-cycle/child2.vue')['default']
     Child3: typeof import('./src/components/life-cycle/child3.vue')['default']
+    CountdownSon: typeof import('./src/components/timer/countdown-son.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElInput: typeof import('element-plus/es')['ElInput']
     Father: typeof import('./src/components/life-cycle/father.vue')['default']
+    MyCountdown: typeof import('./src/components/timer/my-countdown.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
