@@ -26,6 +26,7 @@ declare module 'vue-router/auto-routes' {
     '/cache/[id]/content': RouteRecordInfo<'/cache/[id]/content', '/cache/:id/content', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/over-view': RouteRecordInfo<'/cache/[id]/over-view', '/cache/:id/over-view', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/token': RouteRecordInfo<'/cache/[id]/token', '/cache/:id/token', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/directives': RouteRecordInfo<'/directives', '/directives', Record<never, never>, Record<never, never>>,
     '/life-cycle': RouteRecordInfo<'/life-cycle', '/life-cycle', Record<never, never>, Record<never, never>>,
   }
 }
