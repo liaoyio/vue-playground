@@ -29,6 +29,8 @@ declare module 'vue-router/auto-routes' {
     '/directives': RouteRecordInfo<'/directives', '/directives', Record<never, never>, Record<never, never>>,
     '/life-cycle': RouteRecordInfo<'/life-cycle', '/life-cycle', Record<never, never>, Record<never, never>>,
     '/modal': RouteRecordInfo<'/modal', '/modal', Record<never, never>, Record<never, never>>,
+    '/pro-table/': RouteRecordInfo<'/pro-table/', '/pro-table', Record<never, never>, Record<never, never>>,
+    '/pro-table/base': RouteRecordInfo<'/pro-table/base', '/pro-table/base', Record<never, never>, Record<never, never>>,
     '/timer': RouteRecordInfo<'/timer', '/timer', Record<never, never>, Record<never, never>>,
   }
 }
