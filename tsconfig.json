@@ -22,8 +22,7 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "vite.config.*",
-    "src/pages/users/[[id]].vue"
+    "vite.config.*"
   ],
   "exclude": ["node_modules"]
 }

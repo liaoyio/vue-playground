@@ -26,7 +26,8 @@ function checkPermission(el: HTMLElement, binding: DirectiveBinding) {
         el.remove()
       }
     }
-  } else {
+  }
+  else {
     throw new TypeError(`need roles! Like v-permission="['member','owner']"`)
   }
 }
@@ -37,7 +38,7 @@ export default {
   },
   updated(el: HTMLElement, binding: DirectiveBinding) {
     checkPermission(el, binding)
-  }
+  },
 }
 
 /*

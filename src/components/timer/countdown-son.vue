@@ -1,11 +1,5 @@
 // 孙组件名字 countdownSon
 <script setup lang="ts">
-// 定义响应式数据
-const isFlipping = ref(false);
-const flipType = ref("down");
-const frontTextFromData = ref<string | number>(0);
-const backTextFromData = ref<string | number>(1);
-
 // 接收props
 const props = defineProps({
   // 前牌文字
@@ -23,51 +17,57 @@ const props = defineProps({
     type: Number,
     default: 600,
   },
-});
+})
+// 定义响应式数据
+const isFlipping = ref(false)
+const flipType = ref('down')
+const frontTextFromData = ref<string | number>(0)
+const backTextFromData = ref<string | number>(1)
 
 // 计算属性方法
-const _textClass = (number: string | number) => {
-  return `number${number}`;
-};
+function _textClass(number: string | number) {
+  return `number${number}`
+}
 
 // 翻牌方法
-const _flip = (type: string, front: string | number, back: number) => {
-  if (isFlipping.value) return false;
-  frontTextFromData.value = front;
-  backTextFromData.value = back;
-  flipType.value = type;
-  isFlipping.value = true;
+function _flip(type: string, front: string | number, back: number) {
+  if (isFlipping.value)
+    return false
+  frontTextFromData.value = front
+  backTextFromData.value = back
+  flipType.value = type
+  isFlipping.value = true
   setTimeout(() => {
-    isFlipping.value = false;
-    frontTextFromData.value = back;
-  }, props.duration);
-};
+    isFlipping.value = false
+    frontTextFromData.value = back
+  }, props.duration)
+}
 
 // 下翻牌方法
-const flipDown = (front: string | number, back: number) => {
-  _flip("down", front, back);
-};
+function flipDown(front: string | number, back: number) {
+  _flip('down', front, back)
+}
 
 // 上翻牌方法
-const flipUp = (front: string | number, back: number) => {
-  _flip("up", front, back);
-};
+function flipUp(front: string | number, back: number) {
+  _flip('up', front, back)
+}
 
 // 设置前牌文字方法
-const setFront = (text: number) => {
-  frontTextFromData.value = text;
-};
+function setFront(text: number) {
+  frontTextFromData.value = text
+}
 
 // 设置后牌文字方法
-const setBack = (text: number) => {
-  backTextFromData.value = text;
-};
+function setBack(text: number) {
+  backTextFromData.value = text
+}
 
 // 在组件创建时设置初始值
 onMounted(() => {
-  frontTextFromData.value = props.frontText;
-  backTextFromData.value = props.backText;
-});
+  frontTextFromData.value = props.frontText
+  backTextFromData.value = props.backText
+})
 
 // 导出方法
 defineExpose({
@@ -75,7 +75,7 @@ defineExpose({
   flipUp,
   setFront,
   setBack,
-});
+})
 </script>
 
 <template>
@@ -103,7 +103,7 @@ defineExpose({
 
 .M-Flipper .digital:before,
 .M-Flipper .digital:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -224,51 +224,51 @@ defineExpose({
 
 .M-Flipper .number0:before,
 .M-Flipper .number0:after {
-  content: "0";
+  content: '0';
 }
 
 .M-Flipper .number1:before,
 .M-Flipper .number1:after {
-  content: "1";
+  content: '1';
 }
 
 .M-Flipper .number2:before,
 .M-Flipper .number2:after {
-  content: "2";
+  content: '2';
 }
 
 .M-Flipper .number3:before,
 .M-Flipper .number3:after {
-  content: "3";
+  content: '3';
 }
 
 .M-Flipper .number4:before,
 .M-Flipper .number4:after {
-  content: "4";
+  content: '4';
 }
 
 .M-Flipper .number5:before,
 .M-Flipper .number5:after {
-  content: "5";
+  content: '5';
 }
 
 .M-Flipper .number6:before,
 .M-Flipper .number6:after {
-  content: "6";
+  content: '6';
 }
 
 .M-Flipper .number7:before,
 .M-Flipper .number7:after {
-  content: "7";
+  content: '7';
 }
 
 .M-Flipper .number8:before,
 .M-Flipper .number8:after {
-  content: "8";
+  content: '8';
 }
 
 .M-Flipper .number9:before,
 .M-Flipper .number9:after {
-  content: "9";
+  content: '9';
 }
 </style>

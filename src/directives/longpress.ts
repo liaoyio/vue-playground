@@ -21,7 +21,7 @@ export const vLongPress: Directive = {
 
   beforeUnmount(el: HTMLElement) {
     removeLongPressHandlers(el)
-  }
+  },
 }
 
 function setupLongPressHandlers(el: HTMLElement, binding: DirectiveBinding<number | undefined>) {

@@ -10,7 +10,6 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 
 import { defineConfig } from 'vite'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig(({ mode }) => {
   return {
@@ -18,27 +17,22 @@ export default defineConfig(({ mode }) => {
       VueRouter({ dts: './src/types/typed-router.d.ts' }),
       vue(),
       vueJsx(),
-      vueDevTools(),
       UnoCSS(),
       AutoImport({
         resolvers: [ElementPlusResolver(), AntDesignVueResolver({ importStyle: false })],
         imports: ['vue', VueRouterAutoImports],
-        dts: './src/types/auto-imports.d.ts'
-        /* eslintrc: {
-          enabled: true,
-          filepath: "./src/types/.eslintrc-auto-import.json",
-        }, */
+        dts: './src/types/auto-imports.d.ts',
       }),
-      Components({ resolvers: [ElementPlusResolver()] })
+      Components({ resolvers: [ElementPlusResolver()] }),
     ],
     // 定义全局变量（构建时被静态替换）
     define: {
-      __MODULE_NAME__: JSON.stringify(mode)
+      __MODULE_NAME__: JSON.stringify(mode),
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
-    }
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
+    },
   }
 })

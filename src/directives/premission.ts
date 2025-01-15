@@ -30,5 +30,5 @@ export const permiss: Directive = {
   },
   updated(el: HTMLElement, binding: DirectiveBinding) {
     checkPermission(el, binding)
-  }
+  },
 }

@@ -24,10 +24,11 @@ const LazyLoad = {
       mounted(el) {
         if ('IntersectionObserver' in window) {
           LazyLoad.observe(el)
-        } else {
+        }
+        else {
           LazyLoad.listenerScroll(el)
         }
-      }
+      },
     }
 
     Vue.directive('lazy', lazyDirective)
@@ -78,8 +79,10 @@ const LazyLoad = {
     return function (this: any, ...args: any[]) {
       const currTime = Date.now()
 
-      if (!prevTime) prevTime = currTime
-      if (timer) clearTimeout(timer)
+      if (!prevTime)
+        prevTime = currTime
+      if (timer)
+        clearTimeout(timer)
 
       if (currTime - prevTime > delay) {
         prevTime = currTime
@@ -93,7 +96,7 @@ const LazyLoad = {
         fn.apply(this, args)
       }, delay)
     }
-  }
+  },
 }
 
 export default LazyLoad

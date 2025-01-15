@@ -11,7 +11,7 @@ const emit = defineEmits(['update:visible', 'confirm'])
 
 const bindVisible = useVModel(props, 'visible', emit)
 
-const handleOk = () => {
+function handleOk() {
   bindVisible.value = false
   emit('confirm')
 }

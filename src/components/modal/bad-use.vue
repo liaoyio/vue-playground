@@ -9,32 +9,38 @@ const modal1Visible = ref(false)
 const modal2Visible = ref(false)
 const modal3Visible = ref(false)
 
-const show1 = () => {
+function show1() {
   modal1Visible.value = true
 }
-const show2 = () => {
+function show2() {
   modal2Visible.value = true
 }
-const show3 = () => {
+function show3() {
   modal3Visible.value = true
 }
 
-const onConfirm1 = () => {
+function onConfirm1() {
   message.success('弹窗 1 点击了确定，进行 1 业务相关操作 🥸')
 }
-const onConfirm2 = () => {
+function onConfirm2() {
   message.success('弹窗 2 点击了确定，进行 2 业务相关操作 🤩')
 }
-const onConfirm3 = () => {
+function onConfirm3() {
   message.success('弹窗 3 点击了确定，进行 3 业务相关操作 🥳')
 }
 </script>
 
 <template>
   <div class="flex gap-4">
-    <Button type="primary" @click="show1"> 👉🏻 弹窗 1</Button>
-    <Button type="primary" @click="show2"> 👉🏻 弹窗 3</Button>
-    <Button type="primary" @click="show3"> 👉🏻 弹窗 4</Button>
+    <Button type="primary" @click="show1">
+      👉🏻 弹窗 1
+    </Button>
+    <Button type="primary" @click="show2">
+      👉🏻 弹窗 3
+    </Button>
+    <Button type="primary" @click="show3">
+      👉🏻 弹窗 4
+    </Button>
 
     <Modal1 v-model:visible="modal1Visible" title="弹窗 1" @confirm="onConfirm1">
       弹窗 1 内容

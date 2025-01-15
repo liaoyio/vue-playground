@@ -26,7 +26,7 @@ const vBackTop: Directive = {
     el.addEventListener('click', () => {
       target.scrollTo({
         behavior: 'smooth', // 平滑滚动
-        top: 0 // 滚动到顶部
+        top: 0, // 滚动到顶部
       })
     })
 
@@ -79,10 +79,11 @@ const vBackTop: Directive = {
     // 根据新的绑定值动态添加或移除滚动事件监听器
     if (binding.value !== undefined) {
       ;(target as ScrollableElement).addEventListener('scroll', handleScroll)
-    } else {
+    }
+    else {
       ;(target as ScrollableElement).removeEventListener('scroll', handleScroll)
     }
-  }
+  },
 }
 
 export default vBackTop

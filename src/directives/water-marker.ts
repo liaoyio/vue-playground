@@ -28,5 +28,5 @@ export const marker: Directive = {
     const font = binding.value.font
     const textColor = binding.value.textColor
     addWaterMarker(str, el, font, textColor)
-  }
+  },
 }

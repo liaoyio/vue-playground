@@ -1,27 +1,28 @@
 <script lang="ts" setup>
-import { ElButton } from "element-plus";
-defineOptions({ name: "ButtonList" });
+import { ElButton } from 'element-plus'
 
-type Props = {
+defineOptions({ name: 'ButtonList' })
+
+defineProps<Props>()
+
+const emit = defineEmits([
+  'handleExamine',
+  'handleDelete',
+  'handleDownload',
+  'handleAdd',
+])
+
+interface Props {
   list: {
-    type?: | "text" | "default" | "success" | "warning" | "info" | "primary" | "danger";
-    label: string;
-    event: Parameters<typeof emit>[0];
+    type?: | 'text' | 'default' | 'success' | 'warning' | 'info' | 'primary' | 'danger'
+    label: string
+    event: Parameters<typeof emit>[0]
   }[]
 }
 
-defineProps<Props>();
-
-const emit = defineEmits([
-  "handleExamine",
-  "handleDelete",
-  "handleDownload",
-  "handleAdd",
-]);
-
-const callback = (event: Parameters<typeof emit>[0]) => {
-  emit(event);
-};
+function callback(event: Parameters<typeof emit>[0]) {
+  emit(event)
+}
 </script>
 
 <template>

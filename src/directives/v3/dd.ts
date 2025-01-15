@@ -19,8 +19,8 @@ export const vBackTop: Directive = {
 
     // 定义滚动事件处理函数
     const handleScroll = () => {
-      const scrollTop =
-        target instanceof Window ? window.scrollY : (target as ScrollableElement).scrollTop
+      const scrollTop
+        = target instanceof Window ? window.scrollY : (target as ScrollableElement).scrollTop
       el.style.visibility = scrollTop < (binding.value || 0) ? 'hidden' : 'unset'
     }
 
@@ -51,7 +51,7 @@ export const vBackTop: Directive = {
     if (el._handleClick) {
       el.removeEventListener('click', el._handleClick)
     }
-  }
+  },
 }
 
 // export default vBackTop

@@ -1,17 +1,15 @@
 {
   "name": "vue-playground",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint:eslint": "eslint . --fix",
-    "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "lint:eslint": "eslint . --fix"
   },
   "dependencies": {
     "@vueuse/core": "^12.3.0",
@@ -22,11 +20,15 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^4.5.1",
+    "@antfu/eslint-config": "^3.14.0",
     "@types/node": "^22.10.2",
+    "@unocss/eslint-plugin": "^65.4.0",
     "@unocss/reset": "^0.65.3",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "dayjs": "^1.11.13",
+    "eslint": "^9.18.0",
+    "eslint-plugin-format": "^1.0.1",
     "npm-run-all2": "^7.0.1",
     "query-string": "^9.1.1",
     "sass": "^1.83.1",
@@ -36,7 +38,6 @@
     "unplugin-vue-components": "^0.28.0",
     "unplugin-vue-router": "^0.10.9",
     "vite": "^6.0.5",
-    "vite-plugin-vue-devtools": "^7.6.8",
     "vue-tsc": "^2.1.10"
   }
 }

@@ -25,7 +25,7 @@ function checkPermission(el: HTMLElement, binding: DirectiveBinding) {
 const permission = {
   inserted(el: HTMLElement, binding: DirectiveBinding) {
     checkPermission(el, binding)
-  }
+  },
 }
 
 export default permission

@@ -17,7 +17,8 @@ function addEventListener(el: Element, binding: DirectiveBinding): void {
   const handler = (): void => {
     const currentTime = Date.now()
     // 如果时间间隔不足，直接返回
-    if (currentTime - lastExecTime < delay) return
+    if (currentTime - lastExecTime < delay)
+      return
     // 更新上次执行时间，执行绑定的回调函数
     lastExecTime = currentTime
     value()
@@ -25,7 +26,8 @@ function addEventListener(el: Element, binding: DirectiveBinding): void {
 
   // 如果已存在相同事件的处理器，先移除旧的处理器
   const existingHandler = elMapToHandlers.get(el)
-  if (existingHandler) el.removeEventListener(eventName, existingHandler)
+  if (existingHandler)
+    el.removeEventListener(eventName, existingHandler)
 
   // 绑定新的事件处理器并存储到 WeakMap 中
   elMapToHandlers.set(el, handler)
@@ -33,12 +35,13 @@ function addEventListener(el: Element, binding: DirectiveBinding): void {
   el.addEventListener(eventName, handler)
 }
 
-function parseDirectiveArgs(arg: string | undefined): { eventName: string; delay: number } {
-  if (!arg) return { eventName: 'click', delay: 300 }
+function parseDirectiveArgs(arg: string | undefined): { eventName: string, delay: number } {
+  if (!arg)
+    return { eventName: 'click', delay: 300 }
   const [eventName, delay] = arg.split('-')
   return {
     eventName: eventName || 'click',
-    delay: delay && !Number.isNaN(Number(delay)) ? Number(delay) : 300
+    delay: delay && !Number.isNaN(Number(delay)) ? Number(delay) : 300,
   }
 }
 
@@ -67,7 +70,7 @@ export const vThrottle: Directive = {
   updated(el: HTMLElement, binding) {
     removeEventListener(el)
     addEventListener(el, binding)
-  }
+  },
 }
 
 // export default vThrottle

@@ -16,12 +16,14 @@ export const useUnityModal = createGlobalState(() => {
       // 兼容直接传入component对象格式与直接导入格式
       if (typeof com === 'function') {
         modalComponent.value = await com()
-      } else if (typeof com === 'object' && com?.component) {
+      }
+      else if (typeof com === 'object' && com?.component) {
         modalComponent.value = await com.component()
       }
       injectAttrs.value = attrs || {}
       visible.value = true
-    } catch (error) {
+    }
+    catch (error) {
       console.error(error)
     }
   }
@@ -30,6 +32,6 @@ export const useUnityModal = createGlobalState(() => {
     visible,
     injectAttrs,
     modalComponent,
-    onToggleComponent
+    onToggleComponent,
   }
 })

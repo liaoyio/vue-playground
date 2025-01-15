@@ -1,5 +1,5 @@
-import { ElMessage } from 'element-plus'
 import type { Directive, DirectiveBinding } from 'vue'
+import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 
 function addEventListener(el: Element, binding: DirectiveBinding) {
@@ -33,7 +33,7 @@ export const vCopy: Directive = {
   updated(el: HTMLElement, binding) {
     const { value } = binding
     el.setAttribute('copyValue', String(value))
-  }
+  },
 }
 
 // export default vCopy

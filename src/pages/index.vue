@@ -3,8 +3,12 @@
 <template>
   <main class="">
     <nav>
-      <router-link to="/pro-table">高级表格</router-link> |
-      <router-link to="/pro-table/base">use-url-state</router-link> |
+      <router-link to="/pro-table">
+        高级表格
+      </router-link> |
+      <router-link to="/pro-table/base">
+        use-url-state
+      </router-link> |
     </nav>
   </main>
 </template>

@@ -20,7 +20,7 @@ const debounce = {
         binding.value()
       }, 1000)
     })
-  }
+  },
 }
 
 export default debounce

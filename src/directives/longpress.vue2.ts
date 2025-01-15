@@ -1,3 +1,4 @@
+/* eslint-disable ts/no-use-before-define */
 import type { DirectiveBinding } from 'vue'
 
 interface ElType extends HTMLElement {
@@ -68,7 +69,7 @@ const longpress = {
     el.removeEventListener('touchend', el.__handler__!)
     el.removeEventListener('touchcancel', el.__handler__!)
     delete el.__handler__
-  }
+  },
 }
 
 export default longpress

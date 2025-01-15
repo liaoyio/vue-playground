@@ -28,9 +28,9 @@ export function useUrlState(initialState = {}) {
 
   return [
     state,
-    (newValue: {}) => {
+    (newValue: object) => {
       state.value = { ...state.value, ...newValue }
       update()
-    }
+    },
   ]
 }

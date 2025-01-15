@@ -1,6 +1,6 @@
 import { ElMessage, type MessageHandler } from 'element-plus'
 
-type Options = {
+interface Options {
   message: string
   type: 'success' | 'warning' | 'info' | 'error'
   duration?: number
@@ -13,6 +13,7 @@ class MessageSingleton {
     this.instance = null // 当前消息实例
     this.timer = null // 定时器防止重复弹窗
   }
+
   // 显示消息方法
   showMessage(options: Options) {
     const { message, type = 'info', duration = 3000 } = options
@@ -28,13 +29,14 @@ class MessageSingleton {
       duration,
       onClose: () => {
         this.instance = null // 清除实例引用
-      }
+      },
     })
     // 定时清除，防止重复提交
     this.timer = setTimeout(() => {
       this.instance = null
     }, duration)
   }
+
   destory() {
     if (this.instance) {
       this.instance.close()
@@ -62,10 +64,11 @@ export const Message = {
   },
   error: (message: string, options = {}) => {
     _MessageSingleton.showMessage({ message, type: 'error', ...options })
-  }
+  },
 }
 
-/**在 axios 响应拦截器使用 ->
+/**
+ * 在 axios 响应拦截器使用 ->
  * error?.response?.status !== 403
  if(error.status === 401){
     Message.error(error.status)

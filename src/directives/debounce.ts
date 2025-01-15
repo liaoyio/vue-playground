@@ -6,12 +6,13 @@ const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 // 使用 WeakMap 存储元素与其对应的事件名称，便于在解绑时查找
 const elMapToEventName: WeakMap<Element, string> = new WeakMap()
 
-function parseDirectiveArgs(arg: string | undefined): { eventName: string; delay: number } {
-  if (!arg) return { eventName: 'click', delay: 1000 }
+function parseDirectiveArgs(arg: string | undefined): { eventName: string, delay: number } {
+  if (!arg)
+    return { eventName: 'click', delay: 1000 }
   const [eventName, delay] = arg.split('-')
   return {
     eventName: eventName || 'click',
-    delay: delay && !Number.isNaN(Number(delay)) ? Number(delay) : 300
+    delay: delay && !Number.isNaN(Number(delay)) ? Number(delay) : 300,
   }
 }
 
@@ -64,7 +65,7 @@ export const vDebounce: Directive = {
   },
   beforeUnmount(el: HTMLElement) {
     removeEventListener(el)
-  }
+  },
 }
 
 // export default vDebounce

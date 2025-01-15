@@ -10,8 +10,8 @@ export default defineConfig({
     presetAttributify({ strict: true }),
     presetIcons({
       autoInstall: true,
-      extraProperties: { display: 'inline-block', 'vertical-align': 'middle' }
-    })
+      extraProperties: { 'display': 'inline-block', 'vertical-align': 'middle' },
+    }),
   ],
-  transformers: [Directives(), VariantGroup(), AttributifyJsx()]
+  transformers: [Directives(), VariantGroup(), AttributifyJsx()],
 })

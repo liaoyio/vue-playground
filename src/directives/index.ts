@@ -1,13 +1,13 @@
+import type { App } from 'vue'
 import highlight from './highlight'
 import { permiss } from './premission'
 import { marker } from './water-marker'
-import type { App } from 'vue'
 
 // 汇总自定义指令
 const directives = {
   highlight,
   permiss,
-  marker
+  marker,
 }
 
 export default {
@@ -16,5 +16,5 @@ export default {
     Object.keys(directives).forEach((key) => {
       Vue.directive(key, directives[key as keyof typeof directives])
     })
-  }
+  },
 }

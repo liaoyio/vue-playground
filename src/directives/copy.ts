@@ -55,7 +55,7 @@ const copy = {
   // 指令与元素解绑的时候，移除事件绑定
   unbind(el: ElType) {
     el.removeEventListener('click', el.handler)
-  }
+  },
 }
 
 export default copy

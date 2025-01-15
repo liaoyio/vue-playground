@@ -28,8 +28,9 @@ export const vDraggable: Directive = {
 
     const transformValue = window
       .getComputedStyle(el)
-      .transform.split(',')
-      .map((item) => Number.parseInt(item))
+      .transform
+      .split(',')
+      .map(item => Number.parseInt(item))
       .slice(4, 6)
 
     if (transformValue.length > 1) {
@@ -55,7 +56,7 @@ export const vDraggable: Directive = {
       endY = Number.parseFloat(el.style.transform.split(',')[1]?.replace('px)', '') || '0')
       handleMouseUp(el, handler)
     })
-  }
+  },
 }
 
 // export default vDraggable
