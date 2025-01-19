@@ -22,7 +22,7 @@ function openDialog(comAttrs: Record<string, any>, dialogAttrs: Record<string, a
       ...dialogAttrs,
       modelValue: visible.value,
     }, {
-      default: () => h(Body, comAttrs),
+      default: () => h(Body, { comAttrs }),
       footer: () => h(Footer),
     })
     render(vNode, container)
