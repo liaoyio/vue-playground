@@ -3,5 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <main class="size-screen overflow-x-hidden">
+    <RouterView />
+  </main>
 </template>

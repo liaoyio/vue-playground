@@ -9,7 +9,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     AllCount: typeof import('./src/components/timer/all-count.vue')['default']
     BadUse: typeof import('./src/components/modal/bad-use.vue')['default']
+    Body: typeof import('./src/components/dialog/body.vue')['default']
     ButtonList: typeof import('./src/components/button-list.vue')['default']
+    Child: typeof import('./src/components/child.vue')['default']
     Child1: typeof import('./src/components/life-cycle/child1.vue')['default']
     Child2: typeof import('./src/components/life-cycle/child2.vue')['default']
     Child3: typeof import('./src/components/life-cycle/child3.vue')['default']
@@ -25,6 +27,7 @@ declare module 'vue' {
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     Father: typeof import('./src/components/life-cycle/father.vue')['default']
+    Footer: typeof import('./src/components/dialog/footer.vue')['default']
     GoodCase: typeof import('./src/components/modal/good-case/index.vue')['default']
     Modal1: typeof import('./src/components/modal/modal-1.vue')['default']
     Modal2: typeof import('./src/components/modal/modal-2.vue')['default']

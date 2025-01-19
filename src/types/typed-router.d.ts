@@ -19,18 +19,20 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/404': RouteRecordInfo<'/404', '/404', Record<never, never>, Record<never, never>>,
-    '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
     'CacheLayout': RouteRecordInfo<'CacheLayout', '/cache', Record<never, never>, Record<never, never>>,
     '/cache/[id]/': RouteRecordInfo<'/cache/[id]/', '/cache/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/content': RouteRecordInfo<'/cache/[id]/content', '/cache/:id/content', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/over-view': RouteRecordInfo<'/cache/[id]/over-view', '/cache/:id/over-view', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/cache/[id]/token': RouteRecordInfo<'/cache/[id]/token', '/cache/:id/token', { id: ParamValue<true> }, { id: ParamValue<false> }>,
-    '/directives': RouteRecordInfo<'/directives', '/directives', Record<never, never>, Record<never, never>>,
     '/life-cycle': RouteRecordInfo<'/life-cycle', '/life-cycle', Record<never, never>, Record<never, never>>,
     '/modal': RouteRecordInfo<'/modal', '/modal', Record<never, never>, Record<never, never>>,
     '/pro-table/': RouteRecordInfo<'/pro-table/', '/pro-table', Record<never, never>, Record<never, never>>,
     '/pro-table/base': RouteRecordInfo<'/pro-table/base', '/pro-table/base', Record<never, never>, Record<never, never>>,
-    '/timer': RouteRecordInfo<'/timer', '/timer', Record<never, never>, Record<never, never>>,
+    '/use/': RouteRecordInfo<'/use/', '/use', Record<never, never>, Record<never, never>>,
+    '/use/demo': RouteRecordInfo<'/use/demo', '/use/demo', Record<never, never>, Record<never, never>>,
+    '/use/dialog': RouteRecordInfo<'/use/dialog', '/use/dialog', Record<never, never>, Record<never, never>>,
+    '/use/dy': RouteRecordInfo<'/use/dy', '/use/dy', Record<never, never>, Record<never, never>>,
+    '/utils/queue-up': RouteRecordInfo<'/utils/queue-up', '/utils/queue-up', Record<never, never>, Record<never, never>>,
+    '/utils/v-click': RouteRecordInfo<'/utils/v-click', '/utils/v-click', Record<never, never>, Record<never, never>>,
   }
 }
